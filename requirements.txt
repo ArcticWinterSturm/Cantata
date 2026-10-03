@@ -1,0 +1,2 @@
+# GUI only - the engine and the CLI (python run.py cli ...) are pure standard library.
+PyQt6>=6.5

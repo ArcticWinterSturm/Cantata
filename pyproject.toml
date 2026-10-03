@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cantata"
+version = "0.1.0"
+description = "Local-only archive and forensic recovery for Claude (Claude Code, Claude Desktop, claude.ai exports)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []                      # the engine and CLI are pure standard library
+
+[project.optional-dependencies]
+gui = ["PyQt6>=6.5"]
+dev = ["PyQt6>=6.5", "pytest>=8", "pytest-timeout>=2.3"]
+
+[project.scripts]
+cantata = "cantata.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cantata*"]
